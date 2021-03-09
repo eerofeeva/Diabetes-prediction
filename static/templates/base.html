@@ -4,8 +4,16 @@
 {% block title %}Diabetes Research{% endblock %}
 
 {% block navbar %}
-<div class="navbar navbar-fixed-top">
-  <!-- ... -->
+<div class="navbar navbar-fixed-top" style="display:flex; justify-content:flex-end; width:100%; padding:10;">
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+   About
+  </a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#JupyterNotebook" role="button" aria-expanded="true" aria-controls="collapseExample">
+    Jupyter Notebook
+   </a>
+   <a class="btn btn-primary" data-toggle="collapse" href="#Graphs" role="button" aria-expanded="true" aria-controls="collapseExample">
+    Graphs
+   </a>
 </div>
 {% endblock %}
 
@@ -17,6 +25,8 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.min.css">
+<link rel="stylesheet" href="/static/style.css">
+
 {% endblock %}
 
 {% block scripts %}

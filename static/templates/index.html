@@ -1,24 +1,62 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="row">
+<div class="row" >
         <div class="col-md-4">
             <div class="page-header">
         </div>
         <form method="POST" id="userUpload" action="/userUpload">
             <div class="form-group">
-                <label for="userName">User Name</label>
-                <input type="text" id="userName" name="userName" >
+                <label for="userName">User Name: </label>
+                <input type="text" id="userName" name="userName" ><br><br>
+      
+                <label for="weight">Weight: </label>
+                <input type="number" id="weight" name="weight" ><br><br>
+
+                <label for="height">Height: </label>
+                <input type="number" id="height" name="height" ><br><br>
+
+                <label for="sugar">How About A Donut with a side of Ice Cream and Chocolate sprinkles?</label>
+                <input type="checkbox" id="sugar" name="sugar" ><br><br>
+      
+                <label for="acitve">Let's go for a run!</label>
+                <input type="checkbox" id="active" name="active" ><br><br>
+      
+                <label for="skinThickness">Do code review comments upset you?</label>
+                <input type="checkbox" id="skinThickness" name="skinThickness" ><br><br>
             </div>
-            <button id="btnSubmit" type="submit" class="btn btn-primary" >get userName</button>
-            <label>User Name:</label>
+
+            <button id="btnSubmit" type="submit" class="btn btn-primary" action ="Submit">Submit </button>
+            <button id="btnGenerate" type="submit" class="btn btn-primary" action = "Generate">Or Create User </button>
+            
+            <br><br>
+            <label>User: </label>
             <span  id="output"></span>
         </form>
     </div>
-
 </div>
 
+<div class ="row">
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+        here goes About
+        </div>
+    </div>
+</div>
+<div class ="row">
+    <div class="collapse" id="JupyterNotebook">
+        <div class="card card-body">
+            <iframe src="/static/diabetes.html" title="Jupyter Notebook"></iframe>
+        </div>
+    </div>
+</div>
+<div class ="row">
+    <div class="collapse" id="Graphs">
+        <div class="card card-body">
+         here go graphs 
+       </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
