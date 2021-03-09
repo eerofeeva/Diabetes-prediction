@@ -1,4 +1,21 @@
 $(document).ready(function() {
+    $("#aboutDiv").load("/Resources/about_section.txt", function(){
+        $.ajax({
+            type: "GET",
+            url: "/about",
+            timeout: 800000,
+            success: function (data) {
+                $("#aboutDiv").text(data);
+                console.log("SUCCESS : ", data);
+                alert("Done Loading");
+            },
+            error: function (e) {
+                $("#aboutDiv").text(e.responseText);
+                console.log("ERROR : ", e);
+            }
+        });
+    });
+    
     $("#btnGenerate").click(function (event) {
  
         //stop submit the form, we will post it manually.
@@ -30,11 +47,9 @@ $(document).ready(function() {
  
             },
             error: function (e) {
- 
                 $("#output").text(e.responseText);
                 console.log("ERROR : ", e);
                 $("#btnGenerate").prop("disabled", false);
- 
             }
         });
     });
