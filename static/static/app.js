@@ -7,7 +7,6 @@ $(document).ready(function() {
             success: function (data) {
                 $("#aboutDiv").text(data);
                 console.log("SUCCESS : ", data);
-                alert("Done Loading");
             },
             error: function (e) {
                 $("#aboutDiv").text(e.responseText);
@@ -15,7 +14,10 @@ $(document).ready(function() {
             }
         });
     });
-    
+
+    //load initial plotly graph
+
+
     $("#btnGenerate").click(function (event) {
  
         //stop submit the form, we will post it manually.
@@ -65,7 +67,11 @@ $(document).ready(function() {
  
        // Create an FormData object 
         var data = new FormData(form);
- 
+        
+        var user = {age:parseInt(data.get("age")), bmi:(703*parseFloat(data.get("height"))/parseFloat(data.get("weight")) ** 2)};
+
+        var graph = DrawGraph(user);
+
        // disabled the submit button
         $("#btnSubmit").prop("disabled", true);
  
