@@ -69,7 +69,7 @@ def index():
 
 @app.route("/about")
 def about():
-    return send_file("../Resources/about_section.txt")
+    return send_file("Resources/about_section.txt")
 
 @app.route("/userUpload", methods=['GET','POST'])
 def userUpload():
