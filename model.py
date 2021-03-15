@@ -74,7 +74,7 @@ knn.fit(X_train_scaled, y_train)
 # In[24]:
 
 
-# new_diabetes_data = [[145,85,25.5,0.552,42]]
-# predicted_outcome = knn.predict(new_diabetes_data)
-# print(predicted_outcome)
+new_diabetes_data = [[2,145,85,25,94,28.1,0.200,40]]
+predicted_outcome = knn.predict(new_diabetes_data)
+print(predicted_outcome)
 
