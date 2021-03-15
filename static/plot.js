@@ -5,15 +5,12 @@ function DrawGraph(user)
   }
 
   var filteredDiabetesPos = DiabetesClean.filter(PositiveData);
-
   // console.log(filteredDiabetesPos);
 
   var AgePos = filteredDiabetesPos.map(subject => subject.Age);
-
   // console.log(AgePos);
 
   var BMIPos = filteredDiabetesPos.map(subject => subject.BMI);
-
   // console.log(BMIPos);
 
   function NegativeData(subject) {
@@ -21,24 +18,13 @@ function DrawGraph(user)
   }
 
   var filteredDiabetesNeg = DiabetesClean.filter(NegativeData);
-
   // console.log(filteredDiabetesNeg);
 
   var AgeNeg = filteredDiabetesNeg.map(subject => subject.Age);
-
   // console.log(AgeNeg);
 
   var BMINeg = filteredDiabetesNeg.map(subject => subject.BMI);
-
   // console.log(BMINeg);
-
-  // var AgeUser = UserData.map(subject => subject.Age);
-
-  // // console.log(AgeUser);
-
-  // var BMIUser = UserData.map(subject => subject.BMI);
-
-  // // console.log(BMIUser);
 
   var trace1 = {
     x: AgePos,
@@ -75,3 +61,47 @@ function DrawGraph(user)
 
   Plotly.newPlot("scatter-plot", data, layout);
 }
+
+// // Glucose Plot
+
+// var GlucosePos = filteredDiabetesPos.map(subject => subject.Glucose);
+// // console.log(GlucosePos);
+
+// var GlucoseNeg = filteredDiabetesNeg.map(subject => subject.Glucose);
+// // console.log(GlucoseNeg);
+
+
+// var trace4 = {
+//   x: AgePos,
+//   y: GlucosePos,
+//   mode: 'markers',
+//   type: "scatter",
+//   name: 'Diabetes'
+// };
+
+// var trace5 = {
+//   x: AgeNeg,
+//   y: GlucoseNeg,
+//   mode: 'markers',
+//   type: "scatter",
+//   name: 'No Diabetes'
+// };
+
+// var trace6 = {
+//   x: [user.age], //age
+//   y: [user.glucose], //glucose
+//   mode: 'markers',
+//   type: "scatter",
+//   name: 'User Data',
+//   marker: { size: 12 }
+// }
+
+// var data = [trace4, trace5, trace6];
+
+// var layout = {
+//   title: "Age vs. Glucose of People with and without Diabetes",
+//   xaxis: { title: "Age" },
+//   yaxis: { title: "Glucose"}
+// };
+
+// Plotly.newPlot("scatter-plot2", data, layout);
