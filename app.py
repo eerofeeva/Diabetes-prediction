@@ -48,9 +48,10 @@ class User:
 
     def generate(self):
         self.name = "sample user"
-        self.weight = self.randomInRange(120, 300)
-        self.height = self.randomInRange(60, 96)
-        self.BMI = self.calculateBMI
+        self.weight = float(self.randomInRange(120, 300))
+        self.height = float(self.randomInRange(60, 96))
+        self.age = int(self.randomInRange(12,102))
+        self.BMI = self.calculateBMI()
         self.glucose = self.randomInRange(70, 250)
         self.insulin = self.randomInRange(31, 846)
         self.active = self.randomInRange(30,120)
@@ -96,7 +97,7 @@ def userUpload():
 
 @app.route("/userGenerate", methods=['GET','POST'])
 def userGenerate():
-    user = User('',0,0,0,False,False,False, True)
+    user = User('',0,0,0,0,False,False,True)
     print("userUpload: " + user.name)
     return user.name +' Weight: ' + str(user.weight) + ' Height: ' + str(user.height) \
     + ' Glucose: ' + str(user.glucose) + ' Is Active: '+ str(user.active)  \
