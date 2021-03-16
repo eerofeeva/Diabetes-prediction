@@ -6,7 +6,7 @@ $(document).ready(function() {
             timeout: 800000,
             success: function (data) {
                 $("#aboutDiv").text(data);
-                console.log("SUCCESS : ", data);
+                //console.log("SUCCESS : ", data);
             },
             error: function (e) {
                 $("#aboutDiv").text(e.responseText);
@@ -72,7 +72,7 @@ $(document).ready(function() {
 
         var graph = DrawGraph(user);
 
-        var graph2 = DrawGraph2(user);
+        // var graph2 = DrawGraph2(user);
 
        // disabled the submit button
         $("#btnSubmit").prop("disabled", true);

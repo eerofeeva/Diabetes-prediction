@@ -1,15 +1,19 @@
 from flask import Flask, render_template, request, send_file
 from flask_bootstrap import Bootstrap
 import random
+from model import diabetesPrediction
 
 class User:
     def __init__(self, name, age, weight, height, glucose, active, skin, generate):
         if generate == False:
             self.name = name
-            self.weight = weight
-            self.height = height
-            self.age = age
-            self.BMI = self.calculateBMI
+            self.weight = float(weight)
+            self.height = float(height)
+            self.age = int(age)
+            self.BMI = self.calculateBMI()
+
+            #calculate Blood Pressure
+            self.bloodPressure = self.randomInRange(62, 122)
             
             #if user LOVES sugar
             if glucose:
@@ -30,18 +34,17 @@ class User:
                 self.skin = self.randomInRange(0, 23)
             else:
                 self.skin = self.randomInRange(24, 99)
-            self.diabetesPedigreeCalculate()
+            
+            self.diabetesPedigree = self.diabetesPedigreeCalculate()
+            self.prediction = self.predict() 
         else:
             self.generate()
 
     def diabetesPedigreeCalculate(self):
-        self.randomInRange(0.078, 2.42)
+        return self.randomInRange(0.078, 2.42)
 
     def calculateBMI(self):
-        return 703*self.height/self.weight**2   
-
-    def isLikely(self):
-        pass
+        return 703*(float(self.weight)/(float(self.height)**2)) 
 
     def generate(self):
         self.name = "sample user"
@@ -51,9 +54,14 @@ class User:
         self.glucose = self.randomInRange(70, 250)
         self.insulin = self.randomInRange(31, 846)
         self.active = self.randomInRange(30,120)
+        self.bloodPressure = self.randomInRange(62, 122)
         self.skin = self.randomInRange(20, 70)
-        self.diabetesPedigreeCalculate()
+        self.diabetesPedigree = self.diabetesPedigreeCalculate()
+        self.prediction = self.predict() 
 
+    def predict(self):
+        return diabetesPrediction(0, self.glucose, self.bloodPressure, self.skin, 
+        self.insulin, self.BMI, self.diabetesPedigree, self.age)
 
     def randomInRange(self, x,y):
         return round(random.uniform(x,y), 3)    
@@ -83,7 +91,8 @@ def userUpload():
     print("userUpload: " + user.name)
     return user.name +' Weight: ' + str(user.weight) + ' Height: ' + str(user.height) \
     + ' Glucose: ' + str(user.glucose) + ' Is Active: '+ str(user.active)  \
-    + ' Skin Thickness: ' + str(user.skin)
+    + ' Skin Thickness: ' + str(user.skin) \
+    + ' Is Likely To Have Diabetes: ' + ('Yes' if (user.prediction > 0) else 'No')  
 
 @app.route("/userGenerate", methods=['GET','POST'])
 def userGenerate():
@@ -91,7 +100,8 @@ def userGenerate():
     print("userUpload: " + user.name)
     return user.name +' Weight: ' + str(user.weight) + ' Height: ' + str(user.height) \
     + ' Glucose: ' + str(user.glucose) + ' Is Active: '+ str(user.active)  \
-    + ' Skin Thickness: ' + str(user.skin)
+    + ' Skin Thickness: ' + str(user.skin) \
+    + ' Is Likely To Have Diabetes: ' + ('Yes' if (user.prediction > 0) else 'No')  
 
 if __name__ == "__main__":
     app.run(debug=True)
