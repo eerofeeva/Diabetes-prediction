@@ -10,7 +10,7 @@ The forced curtailment of farming led to significant impacts on their food intak
 
 With this significant change in resources, the number of people with type 2 diabetes went from matching what was typical in the US in the 1930’s to far exceeding it by the 1950’s.
 
-The data we have for these 768 individuals is just a small snapshot of what has been collected over the years, but it provides some comparative insight. Even though the circumstances may not be the same, the data shows that elevated glucose and BMI might be factors that help predict an increased chance for developing type 2 diabetes.</p>
+The data we have for these 768 individuals is just a small snapshot of what has been collected over the years, but it provides some comparative insight. Even though the circumstances may not be the same, the data shows that elevated glucose and BMI might be factors that help predict an increased chance for developing type 2 diabetes.
 
 Citations:
 
