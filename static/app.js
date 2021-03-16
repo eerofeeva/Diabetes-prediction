@@ -5,8 +5,8 @@ $(document).ready(function() {
             url: "/about",
             timeout: 800000,
             success: function (data) {
-                $("#aboutDiv").text(data);
-                //console.log("SUCCESS : ", data);
+                $("#aboutDiv").html(data);
+                console.log("SUCCESS : ", data);
             },
             error: function (e) {
                 $("#aboutDiv").text(e.responseText);
