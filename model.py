@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
 def diabetesPrediction(pregnancies, glucose, bloodPressure, skinThickness, 

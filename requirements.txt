@@ -1,3 +1,6 @@
 Flask 
 gunicorn
 flask-bootstrap
+pandas
+numpy
+scikit-learn
