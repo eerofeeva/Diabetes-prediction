@@ -68,9 +68,11 @@ $(document).ready(function() {
        // Create an FormData object 
         var data = new FormData(form);
         
-        var user = {age:parseInt(data.get("age")), bmi:(703*parseFloat(data.get("height"))/parseFloat(data.get("weight")) ** 2)};
+        var user = {age:parseInt(data.get("age")), bmi:(703*parseFloat(data.get("weight"))/parseFloat(data.get("height")) ** 2), glucose:(100)};
 
         var graph = DrawGraph(user);
+
+        var graph2 = DrawGraph2(user);
 
        // disabled the submit button
         $("#btnSubmit").prop("disabled", true);

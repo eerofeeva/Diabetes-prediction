@@ -64,44 +64,44 @@ function DrawGraph(user)
 
 // // Glucose Plot
 
-// var GlucosePos = filteredDiabetesPos.map(subject => subject.Glucose);
-// // console.log(GlucosePos);
+var GlucosePos = filteredDiabetesPos.map(subject => subject.Glucose);
+// console.log(GlucosePos);
 
-// var GlucoseNeg = filteredDiabetesNeg.map(subject => subject.Glucose);
-// // console.log(GlucoseNeg);
+var GlucoseNeg = filteredDiabetesNeg.map(subject => subject.Glucose);
+// console.log(GlucoseNeg);
 
 
-// var trace4 = {
-//   x: AgePos,
-//   y: GlucosePos,
-//   mode: 'markers',
-//   type: "scatter",
-//   name: 'Diabetes'
-// };
+var trace4 = {
+  x: AgePos,
+  y: GlucosePos,
+  mode: 'markers',
+  type: "scatter",
+  name: 'Diabetes'
+};
 
-// var trace5 = {
-//   x: AgeNeg,
-//   y: GlucoseNeg,
-//   mode: 'markers',
-//   type: "scatter",
-//   name: 'No Diabetes'
-// };
+var trace5 = {
+  x: AgeNeg,
+  y: GlucoseNeg,
+  mode: 'markers',
+  type: "scatter",
+  name: 'No Diabetes'
+};
 
-// var trace6 = {
-//   x: [user.age], //age
-//   y: [user.glucose], //glucose
-//   mode: 'markers',
-//   type: "scatter",
-//   name: 'User Data',
-//   marker: { size: 12 }
-// }
+var trace6 = {
+  x: [user.age], //age
+  y: [user.glucose], //glucose
+  mode: 'markers',
+  type: "scatter",
+  name: 'User Data',
+  marker: { size: 12 }
+}
 
-// var data = [trace4, trace5, trace6];
+var data2 = [trace4, trace5, trace6];
 
-// var layout = {
-//   title: "Age vs. Glucose of People with and without Diabetes",
-//   xaxis: { title: "Age" },
-//   yaxis: { title: "Glucose"}
-// };
+var layout2 = {
+  title: "Age vs. Glucose of People with and without Diabetes",
+  xaxis: { title: "Age" },
+  yaxis: { title: "Glucose"}
+};
 
-// Plotly.newPlot("scatter-plot2", data, layout);
+Plotly.newPlot("scatter-plot2", data2, layout2);
