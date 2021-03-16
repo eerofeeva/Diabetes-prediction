@@ -64,7 +64,7 @@ function DrawGraph(user)
 
 // // Glucose Plot
 
-var GlucosePos = filteredDiabetesPos.map(subject => subject.Glucose);
+//var GlucosePos = filteredDiabetesPos.map(subject => subject.Glucose);
 // console.log(GlucosePos);
 
 var GlucoseNeg = filteredDiabetesNeg.map(subject => subject.Glucose);
