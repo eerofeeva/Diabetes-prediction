@@ -20,4 +20,4 @@ Thank you for checking out this project!
 <p>Elena Erofeeva: Created site infastructure and input form, made sure input data flowed to the model and user graph, and linked the various parts of the site together.</p>
 <p>Kelly Olien: Created the machine learning predictive model displayed in jupyter notebook.</p>
 <p>Kylie Malcolm: Wrote the about section, created matplotlib correlative matrices, and the four tableau graphs comparing multiple attribures in the dataset.</p>
-<p>Kory Harris: Created second set of tableau scatter charts.</p>
+<p>Kory Harris: Created tableau scatter charts.</p>
