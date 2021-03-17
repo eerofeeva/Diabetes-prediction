@@ -4,15 +4,15 @@
 
 <p>The reason for the intense interest is that they have the highest known prevalence of type 2 diabetes among any identified community on the planet and relatively homogenous. To put this in perspective, the number of cases in the Akimel O’odeham in the study was nineteen fold higher than a comparative study located in Rochester, Minnesota during the 1970’s (Schulz & Chaudhari, 2015). Unfortunately, for the purposes of this project, we were not able to access a copy of the Minnesota data for comparison.</p>
 
-<p>Not surprisingly, like many ailments, the causes are multifactored. Though there are compelling genetic factors that affect this group, many of the reasons for the high prevalence of type 2 diabetes is environmental. According to Schulz and Chaudhari, in the early 1900’s: </p>
+<p>Not surprisingly, like many ailments, the causes are multifactored. Though there are compelling genetic factors that affect this group, many of the reasons for the high prevalence of type 2 diabetes is environmental. According to Schulz and Chaudhari, in the early 1900’s:</p>
 
-<p>The forced curtailment of farming led to significant impacts on their food intake, physical activity and their economy [6]. Their life changed from farming sustained though physical labor to one of food scarcity and little labor. Famine, rarely experienced in the past, became chronic. As a result, this time period marked the end of a lifestyle to which the Pima were well-adapted and transitioned to a lifestyle for which they were poorly adapted. Their low-fat, high-carbohydrate diet changed to one that ultimately derived more than forty percent of its energy from fat [7]. At the same time the demand for physical labor subsided. (2015)</p>
+<p style="margin-left: 40px; margin-right: 40px">The forced curtailment of farming led to significant impacts on their food intake, physical activity and their economy [6]. Their life changed from farming sustained though physical labor to one of food scarcity and little labor. Famine, rarely experienced in the past, became chronic. As a result, this time period marked the end of a lifestyle to which the Pima were well-adapted and transitioned to a lifestyle for which they were poorly adapted. Their low-fat, high-carbohydrate diet changed to one that ultimately derived more than forty percent of its energy from fat [7]. At the same time the demand for physical labor subsided. (2015)</p>
 
 <p>With this significant change in resources, the number of people with type 2 diabetes went from matching what was typical in the US in the 1930’s to far exceeding it by the 1950’s.</p>
 
 <p>The data we have for these 768 individuals is just a small snapshot of what has been collected over the years, but it provides some comparative insight. Even though the circumstances may not be the same, the data shows that elevated glucose and BMI might be factors that help predict an increased chance for developing type 2 diabetes.</p>
 
-<h2> Citations:</h2>
+<h2>Citations:</h2>
 
 <p>Pima People. (2021, January 21). In Wikipedia. https://en.wikipedia.org/wiki/Pima_people#cite_note-NMSU-13</p>
 
