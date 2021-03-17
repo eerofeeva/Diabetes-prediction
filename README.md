@@ -1,5 +1,3 @@
-# Diabetes-prediction
-
 <h1>Diabetes & You</h1>
 
 <h3>About the Data:</h3>
