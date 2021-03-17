@@ -21,6 +21,7 @@ The generated user data also includes the results of running the user data throu
 
 Under the “Graphs” tab of the site, there are two correlation matrices and two tableau graph stories comparing the participant data to illustrate various trends. Under the “Jupyter Notebook” tab a user would be able to examine the machine learning model and learn about how the diabetes prediction was made. Under the “About” section you can learn more about the data itself.
 
+![image](https://user-images.githubusercontent.com/70925750/111549671-990c9380-874a-11eb-8033-cec324b894e3.png)
 ![image](https://user-images.githubusercontent.com/70925750/111548951-762daf80-8749-11eb-905c-ababf6f8f46f.png)
 
 The application runs on Heroku and uses a combination of python and javascript to bring together the various elements of the site for an interactive experience.
