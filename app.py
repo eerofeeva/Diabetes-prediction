@@ -25,9 +25,9 @@ class User:
 
             #if user Loves sports
             if active:    
-                self.active = self.randomInRange(30,72)
-            else:
                 self.active = self.randomInRange(73,122)
+            else:
+                self.active = self.randomInRange(30,72)
             
             #if user is thick skinned
             if skin:
@@ -89,7 +89,6 @@ def userUpload():
     request.form.get('sugar',''),
     request.form.get('active',''),
     request.form.get('skinThickness',''), False)
-    print("userUpload: " + user.name)
     return user.name +' Weight: ' + str(user.weight) + ' Height: ' + str(user.height) \
     + ' Glucose: ' + str(user.glucose) + ' Is Active: '+ str(user.active)  \
     + ' Skin Thickness: ' + str(user.skin) \
@@ -98,11 +97,20 @@ def userUpload():
 @app.route("/userGenerate", methods=['GET','POST'])
 def userGenerate():
     user = User('',0,0,0,0,False,False,True)
-    print("userUpload: " + user.name)
-    return user.name +' Weight: ' + str(user.weight) + ' Height: ' + str(user.height) \
+    rtn_msg = user.name +' Weight: ' + str(user.weight) + ' Height: ' + str(user.height) \
     + ' Glucose: ' + str(user.glucose) + ' Is Active: '+ str(user.active)  \
     + ' Skin Thickness: ' + str(user.skin) \
-    + ' Is Likely To Have Diabetes: ' + ('Yes' if (user.prediction > 0) else 'No')  
+    + ' Is Likely To Have Diabetes: ' + ('Yes' if (user.prediction > 0) else 'No')
+    return {'msg':rtn_msg,
+            'name': user.name,
+            'weight': user.weight,
+            'height': user.height,
+            'age': user.age,
+            'BMI': user.BMI,
+            'glucose': user.glucose,
+            'active': user.active,
+            'skinthick': user.skin,
+            'prediction': float(user.prediction[0])}
 
 if __name__ == "__main__":
     app.run(debug=True)
