@@ -7,6 +7,8 @@ The data we have for these 768 individuals is just a small snapshot of what has 
 
 <h3>About the Application:</h3>
 
+<h5>Application on Heroku: https://diabetesprediction2021.herokuapp.com/</h5>
+
 For this project we created an application that allows a user to compare their data to that of the dataset after we filtered out users who had null values in fields where that would not be possible. Since not everyone knows their glucose and insulin levels off hand the system generates random numbers within a certain range based off some lighthearted questions. This is meant to be an interesting but fun tool for comparison.
 
 The generated user data also includes the results of running the user data through a machine learning model (with a roughly 75% accuracy) to predict the likelihood of diabetes. Not shockingly, since this dataset is a group of people for having the highest incident of type 2 diabetes in the world, the results may come back as a “Yes” even though the user may not be at risk for diabetes. In addition to the model results, the application also generates a plotly chart of the cleaned data for a comparison of age and BMI of the study participants with the user inputs included for comparison.
