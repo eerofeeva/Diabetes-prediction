@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -37,7 +36,6 @@ insulin, BMI, diabetesPedigree, age):
     knn = KNeighborsClassifier(n_neighbors=7)
     knn.fit(X_train_scaled, y_train)
 
-    #new_diabetes_data = [[2,145,85,25,94,28.1,0.200,40]]
     new_diabetes_data = [[pregnancies, glucose, bloodPressure, skinThickness, 
     insulin, BMI, diabetesPedigree, age]]
     return knn.predict(new_diabetes_data)

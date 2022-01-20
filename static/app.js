@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#aboutDiv").load("/Resources/about_section.txt", function(){
+    $("#aboutDiv").load("/about", function(){
         $.ajax({
             type: "GET",
             url: "/about",
